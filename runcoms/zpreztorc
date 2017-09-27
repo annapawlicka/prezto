@@ -32,7 +32,14 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt'
+  'prompt' \
+  'git' \
+  'completion' \
+  'gpg' \
+  'homebrew' \
+  'ssh' \
+  'syntax-highlighting' \
+  'tmux'
 
 #
 # Autosuggestions

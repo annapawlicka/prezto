@@ -11,3 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export PATH=$PATH:~/opt/bin:~/dev/bin:/opt/local/bin/
+export PATH="/usr/local/opt/openssl/bin:$PATH"

@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vi'
+export VISUAL='vi'
 export PAGER='less'
 
 #
@@ -43,6 +43,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /opt/local/bin
   /usr/local/{bin,sbin}
   $path
 )
@@ -61,3 +62,18 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
+
+#
+# Variables
+#
+
+export ERECEIPTS_HOME=/Users/apawlic/workspace/eReceipts-services
+
+#
+# Aliases
+#
+
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias build-all='lein sub do clean, install && lein gen-system-dev'
+alias test-all='cd system-test/ && lein test && cd ../system.dev && lein test'
+alias fleet="joker /Users/apawlic/workspace/fleet/fleet.joke"
