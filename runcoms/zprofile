@@ -45,6 +45,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /opt/local/bin
   /usr/local/{bin,sbin}
+  /Users/apawlic/workspace/scripts
   $path
 )
 
@@ -74,6 +75,7 @@ export ERECEIPTS_HOME=/Users/apawlic/workspace/eReceipts-services
 #
 
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
-alias build-all='lein sub do clean, install && lein gen-system-dev'
-alias test-all='cd system-test/ && lein test && cd ../system.dev && lein test'
-alias fleet="joker /Users/apawlic/workspace/fleet/fleet.joke"
+alias build-all='lein sub do clean, install'
+alias test-all='lein sub test'
+alias fleet="joker /Users/apawlic/workspace/fleet/fleet2.joke"
+alias fix-camera='sudo launchctl stop com.apple.cmio.VDCAssistant && sudo launchctl start com.apple.cmio.VDCAssistant && sudo launchctl stop com.apple.cmio.AppleCameraAssistant && sudo launchctl start com.apple.cmio.AppleCameraAssistant'
