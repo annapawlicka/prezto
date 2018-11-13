@@ -1,9 +1,6 @@
 #
 # Sets Prezto options.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 #
 # General
@@ -42,6 +39,8 @@ zstyle ':prezto:load' pmodule \
   'homebrew' \
   'ssh' \
   'syntax-highlighting' \
+  'autosuggestions' \
+  'history-substring-search' \
   'tmux'
 
 #
@@ -49,7 +48,7 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the query found color.
-# zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions:color' found 'fg=105'
 
 #
 # Completions
@@ -129,7 +128,7 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Set the prompt to display the return code along with an indicator for non-zero
 # return codes. This is not supported by all prompts.
-# zstyle ':prezto:module:prompt' show-return-val 'yes'
+zstyle ':prezto:module:prompt' show-return-val 'yes'
 
 #
 # Python
@@ -171,14 +170,14 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'line' \
-#   'cursor' \
-#   'root'
-#
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+   'line' \
+   'cursor' \
+   'root'
+
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
 #   'builtin' 'bg=blue' \
